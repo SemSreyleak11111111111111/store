@@ -2,22 +2,15 @@ import { useState } from "react";
 import { Menu, X } from "lucide-react";
 import categories from "../data/categoryData";
 
-function Navbar() {
+function Navbar({ isKhmer, toggleLanguage }) {
   const [menuOpen, setMenuOpen] = useState(false);
-  const [language, setLanguage] = useState("en");
-
-  const isKhmer = language === "kh";
-
-  const toggleLanguage = () => {
-    setLanguage(isKhmer ? "en" : "kh");
-  };
 
   return (
     <nav
-  className={`relative border-b border-white/10 bg-black text-white ${
-    isKhmer ? "khmer-font" : ""
-  }`}
->
+      className={`relative border-b border-white/10 bg-black text-white ${
+        isKhmer ? "khmer-font" : ""
+      }`}
+    >
       <div className="mx-auto flex h-20 max-w-7xl items-center justify-between px-6">
 
         {/* Store Logo */}
@@ -31,6 +24,7 @@ function Navbar() {
         {/* Desktop Navigation */}
         <div className="hidden items-center gap-8 md:flex">
 
+          {/* Home */}
           <a
             href="/"
             className="text-sm transition hover:text-zinc-400"
@@ -38,16 +32,20 @@ function Navbar() {
             {isKhmer ? "ទំព័រដើម" : "Home"}
           </a>
 
+          {/* Categories */}
           {categories.map((category) => (
             <a
               key={category.slug}
               href={`/#${category.slug}`}
               className="text-sm transition hover:text-zinc-400"
             >
-              {category.name[language]}
+              {isKhmer
+                ? category.name.kh
+                : category.name.en}
             </a>
           ))}
 
+          {/* About */}
           <a
             href="/about"
             className="text-sm transition hover:text-zinc-400"
@@ -55,32 +53,30 @@ function Navbar() {
             {isKhmer ? "អំពីយើង" : "About"}
           </a>
 
-          {/* Language Toggle */}
+          {/* Language Button */}
           <button
-  onClick={toggleLanguage}
-  className="rounded-full border border-white/20 px-3 py-1.5 text-xs transition hover:border-white/50 hover:bg-white/10"
-  aria-label="Change language"
->
-  <span className={isKhmer ? "khmer-font" : ""}>
-    {isKhmer ? "English" : "ខ្មែរ"}
-  </span>
-</button>
+            onClick={toggleLanguage}
+            className="rounded-full border border-white/20 px-3 py-1.5 text-xs transition hover:border-white/50 hover:bg-white/10"
+            aria-label="Change language"
+          >
+            {isKhmer ? "EN" : "ខ្មែរ"}
+          </button>
 
         </div>
 
         {/* Mobile Right Side */}
         <div className="flex items-center gap-4 md:hidden">
 
-          {/* Language Toggle */}
+          {/* Language Button */}
           <button
             onClick={toggleLanguage}
-            className="rounded-full border border-white/20 px-3 py-1.5 text-xs font-medium transition hover:border-white/50 hover:bg-white/10"
+            className="rounded-full border border-white/20 px-3 py-1.5 text-xs transition hover:border-white/50 hover:bg-white/10"
             aria-label="Change language"
           >
             {isKhmer ? "EN" : "ខ្មែរ"}
           </button>
 
-          {/* Mobile Menu Button */}
+          {/* Mobile Menu */}
           <button
             className="transition hover:text-zinc-400"
             onClick={() => setMenuOpen(!menuOpen)}
@@ -98,6 +94,7 @@ function Navbar() {
 
           <div className="flex flex-col gap-5">
 
+            {/* Home */}
             <a
               href="/"
               onClick={() => setMenuOpen(false)}
@@ -106,6 +103,7 @@ function Navbar() {
               {isKhmer ? "ទំព័រដើម" : "Home"}
             </a>
 
+            {/* Categories */}
             {categories.map((category) => (
               <a
                 key={category.slug}
@@ -113,10 +111,13 @@ function Navbar() {
                 onClick={() => setMenuOpen(false)}
                 className="text-sm transition hover:text-zinc-400"
               >
-                {category.name[language]}
+                {isKhmer
+                  ? category.name.kh
+                  : category.name.en}
               </a>
             ))}
 
+            {/* About */}
             <a
               href="/about"
               onClick={() => setMenuOpen(false)}
