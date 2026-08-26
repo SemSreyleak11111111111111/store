@@ -11,10 +11,12 @@ import stand9 from "../assets/standSign/IMG_2061.JPG";
 const standSign = [
   {
     id: 1,
-    name: "Stand Sign 1",
+    name: "code.E1 ",
     category: "Stand Sign",
-    price: 0,
+    price: 54,
     image: stand1,
+        size: "60x90",
+
   },
   {
     id: 2,

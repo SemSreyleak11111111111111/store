@@ -7,9 +7,8 @@ function Navbar({ isKhmer, toggleLanguage }) {
 
   return (
     <nav
-      className={`relative border-b border-white/10 bg-black text-white ${
-        isKhmer ? "khmer-font" : ""
-      }`}
+      className={`relative border-b border-white/10 bg-black text-white ${isKhmer ? "khmer-font" : ""
+        }`}
     >
       <div className="mx-auto flex h-20 max-w-7xl items-center justify-between px-6">
 
@@ -54,13 +53,13 @@ function Navbar({ isKhmer, toggleLanguage }) {
           </a>
 
           {/* Language Button */}
-          <button
+          {/* <button
             onClick={toggleLanguage}
             className="rounded-full border border-white/20 px-3 py-1.5 text-xs transition hover:border-white/50 hover:bg-white/10"
             aria-label="Change language"
           >
             {isKhmer ? "EN" : "ខ្មែរ"}
-          </button>
+          </button> */}
 
         </div>
 
