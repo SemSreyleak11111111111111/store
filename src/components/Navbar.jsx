@@ -2,14 +2,12 @@ import { useState } from "react";
 import { Menu, X } from "lucide-react";
 import categories from "../data/categoryData";
 
-function Navbar({ isKhmer, toggleLanguage }) {
+function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <nav
-      className={`relative border-b border-white/10 bg-black text-white ${isKhmer ? "khmer-font" : ""
-        }`}
-    >
+    // <nav className="relative border-b border-white/10 bg-black text-white">
+    <nav className="sticky top-0 z-50 border-b border-white/10 bg-black text-white">
       <div className="mx-auto flex h-20 max-w-7xl items-center justify-between px-6">
 
         {/* Store Logo */}
@@ -28,7 +26,7 @@ function Navbar({ isKhmer, toggleLanguage }) {
             href="/"
             className="text-sm transition hover:text-zinc-400"
           >
-            {isKhmer ? "ទំព័រដើម" : "Home"}
+            Home
           </a>
 
           {/* Categories */}
@@ -38,9 +36,7 @@ function Navbar({ isKhmer, toggleLanguage }) {
               href={`/#${category.slug}`}
               className="text-sm transition hover:text-zinc-400"
             >
-              {isKhmer
-                ? category.name.kh
-                : category.name.en}
+              {category.name.en}
             </a>
           ))}
 
@@ -49,33 +45,15 @@ function Navbar({ isKhmer, toggleLanguage }) {
             href="/about"
             className="text-sm transition hover:text-zinc-400"
           >
-            {isKhmer ? "អំពីយើង" : "About"}
+            About
           </a>
-
-          {/* Language Button */}
-          {/* <button
-            onClick={toggleLanguage}
-            className="rounded-full border border-white/20 px-3 py-1.5 text-xs transition hover:border-white/50 hover:bg-white/10"
-            aria-label="Change language"
-          >
-            {isKhmer ? "EN" : "ខ្មែរ"}
-          </button> */}
 
         </div>
 
         {/* Mobile Right Side */}
         <div className="flex items-center gap-4 md:hidden">
 
-          {/* Language Button */}
-          <button
-            onClick={toggleLanguage}
-            className="rounded-full border border-white/20 px-3 py-1.5 text-xs transition hover:border-white/50 hover:bg-white/10"
-            aria-label="Change language"
-          >
-            {isKhmer ? "EN" : "ខ្មែរ"}
-          </button>
-
-          {/* Mobile Menu */}
+          {/* Mobile Menu Toggle */}
           <button
             className="transition hover:text-zinc-400"
             onClick={() => setMenuOpen(!menuOpen)}
@@ -90,7 +68,6 @@ function Navbar({ isKhmer, toggleLanguage }) {
       {/* Mobile Menu */}
       {menuOpen && (
         <div className="border-t border-white/10 bg-black px-6 py-6 md:hidden">
-
           <div className="flex flex-col gap-5">
 
             {/* Home */}
@@ -99,7 +76,7 @@ function Navbar({ isKhmer, toggleLanguage }) {
               onClick={() => setMenuOpen(false)}
               className="text-sm transition hover:text-zinc-400"
             >
-              {isKhmer ? "ទំព័រដើម" : "Home"}
+              Home
             </a>
 
             {/* Categories */}
@@ -110,9 +87,7 @@ function Navbar({ isKhmer, toggleLanguage }) {
                 onClick={() => setMenuOpen(false)}
                 className="text-sm transition hover:text-zinc-400"
               >
-                {isKhmer
-                  ? category.name.kh
-                  : category.name.en}
+                {category.name.en}
               </a>
             ))}
 
@@ -122,7 +97,7 @@ function Navbar({ isKhmer, toggleLanguage }) {
               onClick={() => setMenuOpen(false)}
               className="text-sm transition hover:text-zinc-400"
             >
-              {isKhmer ? "អំពីយើង" : "About"}
+              About
             </a>
 
           </div>

@@ -1,23 +1,24 @@
 // const categories = [
-// //   {
-// //     name: "Clothes",
-// //     slug: "clothes",
-// //   },
-// //   {
-// //     name: "Logo",
-// //     slug: "logo",
-// //   },
-// //   {
-// //     name: "Sticker",
-// //     slug: "sticker",
-// //   },
 //   {
-//     name: "Stand Sign",
 //     slug: "stand-sign",
+//     name: {
+//       en: "Stand Sign",
+//       kh: "ផ្លាកបញ្ឈរ",
+//     },
 //   },
+//   {
+//     slug: "stand-sign-led",
+//     name: {
+//       en: "Stand Sign LED",
+//       kh: "ផ្លាកបញ្ឈរ",
+//     },
+//   },
+  
+
 // ];
 
 // export default categories;
+
 
 const categories = [
   {
@@ -27,7 +28,13 @@ const categories = [
       kh: "ផ្លាកបញ្ឈរ",
     },
   },
- 
+  {
+    slug: "stand-sign-led",
+    name: {
+      en: "Stand Sign LED",
+      kh: "ផ្លាកបញ្ឈរ LED",
+    },
+  },
 ];
 
 export default categories;
