@@ -14,7 +14,7 @@ function Navbar() {
           href="/"
           className="text-xl font-bold tracking-widest"
         >
-          STORE.
+         BxCxDx.
         </a>
 
         {/* Desktop Navigation */}
