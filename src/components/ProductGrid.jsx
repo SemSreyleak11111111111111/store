@@ -2,7 +2,6 @@ import products from "../data/products";
 import ProductCard from "./ProductCard";
 
 function ProductGrid() {
-  // Group products by category
   const groupedProducts = products.reduce((groups, product) => {
     const category = product.category;
 
@@ -18,22 +17,33 @@ function ProductGrid() {
   return (
     <div className="space-y-16">
       {Object.entries(groupedProducts).map(
-        ([category, categoryProducts]) => (
-          <section key={category}>
-            <h3 className="mb-6 text-2xl font-bold uppercase tracking-wider">
-              {category}
-            </h3>
+        ([category, categoryProducts]) => {
+          const slug = category
+            .toLowerCase()
+            .trim()
+            .replace(/\s+/g, "-");
 
-            <div className="grid grid-cols-3 gap-2 sm:gap-4">
-              {categoryProducts.map((product) => (
-                <ProductCard
-                  key={product.id}
-                  product={product}
-                />
-              ))}
-            </div>
-          </section>
-        )
+          return (
+            <section
+              key={category}
+              id={slug}
+              className="scroll-mt-24"
+            >
+              <h3 className="mb-6 text-2xl font-bold uppercase tracking-wider">
+                {category}
+              </h3>
+
+              <div className="grid grid-cols-3 gap-2 sm:gap-4">
+                {categoryProducts.map((product) => (
+                  <ProductCard
+                    key={product.id}
+                    product={product}
+                  />
+                ))}
+              </div>
+            </section>
+          );
+        }
       )}
     </div>
   );
