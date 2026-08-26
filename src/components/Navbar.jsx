@@ -49,13 +49,7 @@ function Navbar() {
         {/* Icons */}
         <div className="flex items-center gap-4">
 
-          {/* <button className="hover:text-zinc-400">
-            <Search size={20} />
-          </button> */}
-
-          {/* <button className="hover:text-zinc-400">
-            <ShoppingBag size={20} />
-          </button> */}
+        
 
           {/* Mobile Menu Button */}
           <button
