@@ -14,3 +14,14 @@ body {
   color: white;
   font-family: Arial, Helvetica, sans-serif;
 }
+@font-face {
+  font-family: "AKbalthom Freedom Plus";
+  src: url("./assets/fonts/AKbalthom Freedom Plus V1.10.ttf")
+    format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+.khmer-font {
+  font-family: "AKbalthom Freedom Plus", sans-serif;
+}

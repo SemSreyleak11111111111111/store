@@ -1,12 +1,23 @@
 import { useState } from "react";
-import { Search, ShoppingBag, Menu, X } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import categories from "../data/categoryData";
 
 function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [language, setLanguage] = useState("en");
+
+  const isKhmer = language === "kh";
+
+  const toggleLanguage = () => {
+    setLanguage(isKhmer ? "en" : "kh");
+  };
 
   return (
-    <nav className="relative border-b border-white/10 bg-black text-white">
+    <nav
+  className={`relative border-b border-white/10 bg-black text-white ${
+    isKhmer ? "khmer-font" : ""
+  }`}
+>
       <div className="mx-auto flex h-20 max-w-7xl items-center justify-between px-6">
 
         {/* Store Logo */}
@@ -14,7 +25,7 @@ function Navbar() {
           href="/"
           className="text-xl font-bold tracking-widest"
         >
-         BxCxDx.
+          BxCxDx.
         </a>
 
         {/* Desktop Navigation */}
@@ -22,38 +33,56 @@ function Navbar() {
 
           <a
             href="/"
-            className="text-sm hover:text-zinc-400"
+            className="text-sm transition hover:text-zinc-400"
           >
-            Home
+            {isKhmer ? "ទំព័រដើម" : "Home"}
           </a>
 
           {categories.map((category) => (
             <a
               key={category.slug}
               href={`/#${category.slug}`}
-              className="text-sm hover:text-zinc-400"
+              className="text-sm transition hover:text-zinc-400"
             >
-              {category.name}
+              {category.name[language]}
             </a>
           ))}
 
           <a
             href="/about"
-            className="text-sm hover:text-zinc-400"
+            className="text-sm transition hover:text-zinc-400"
           >
-            About
+            {isKhmer ? "អំពីយើង" : "About"}
           </a>
+
+          {/* Language Toggle */}
+          <button
+  onClick={toggleLanguage}
+  className="rounded-full border border-white/20 px-3 py-1.5 text-xs transition hover:border-white/50 hover:bg-white/10"
+  aria-label="Change language"
+>
+  <span className={isKhmer ? "khmer-font" : ""}>
+    {isKhmer ? "English" : "ខ្មែរ"}
+  </span>
+</button>
 
         </div>
 
-        {/* Icons */}
-        <div className="flex items-center gap-4">
+        {/* Mobile Right Side */}
+        <div className="flex items-center gap-4 md:hidden">
 
-        
+          {/* Language Toggle */}
+          <button
+            onClick={toggleLanguage}
+            className="rounded-full border border-white/20 px-3 py-1.5 text-xs font-medium transition hover:border-white/50 hover:bg-white/10"
+            aria-label="Change language"
+          >
+            {isKhmer ? "EN" : "ខ្មែរ"}
+          </button>
 
           {/* Mobile Menu Button */}
           <button
-            className="md:hidden hover:text-zinc-400"
+            className="transition hover:text-zinc-400"
             onClick={() => setMenuOpen(!menuOpen)}
             aria-label="Toggle menu"
           >
@@ -72,9 +101,9 @@ function Navbar() {
             <a
               href="/"
               onClick={() => setMenuOpen(false)}
-              className="text-sm hover:text-zinc-400"
+              className="text-sm transition hover:text-zinc-400"
             >
-              Home
+              {isKhmer ? "ទំព័រដើម" : "Home"}
             </a>
 
             {categories.map((category) => (
@@ -82,22 +111,21 @@ function Navbar() {
                 key={category.slug}
                 href={`/#${category.slug}`}
                 onClick={() => setMenuOpen(false)}
-                className="text-sm hover:text-zinc-400"
+                className="text-sm transition hover:text-zinc-400"
               >
-                {category.name}
+                {category.name[language]}
               </a>
             ))}
 
             <a
               href="/about"
               onClick={() => setMenuOpen(false)}
-              className="text-sm hover:text-zinc-400"
+              className="text-sm transition hover:text-zinc-400"
             >
-              About
+              {isKhmer ? "អំពីយើង" : "About"}
             </a>
 
           </div>
-
         </div>
       )}
     </nav>
