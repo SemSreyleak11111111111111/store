@@ -39,7 +39,7 @@ function Home() {
         <div className="mb-10 flex items-end justify-between">
           <div>
             <p className="text-sm uppercase tracking-widest text-zinc-500">
-              Featured
+              {/* Featured */}
             </p>
 
             <h2 className="mt-2 text-3xl font-bold">
@@ -48,7 +48,7 @@ function Home() {
           </div>
 
           <button className="hidden text-sm text-zinc-400 hover:text-white md:block">
-            View All →
+            {/* View All → */}
           </button>
         </div>
 
