@@ -10,58 +10,57 @@ const categories = [
     name: {
       en: "Stand Sign LED",
     },
-    
   },
   {
-    slug: "lightboxPro",
+    slug: "lightbox-pro",
     name: {
       en: "Lightbox Pro",
     },
   },
   {
-    slug: "standsignNoLED",
+    slug: "stand-sign-no-led",
     name: {
       en: "Stand Sign (No LED)",
     },
   },
   {
-    slug: "lightboxBoob",
+    slug: "lightbox-boob",
     name: {
       en: "Lightbox Boob",
     },
   },
   {
-    slug: "lightboxSmoothie",
+    slug: "lightbox-smoothie",
     name: {
       en: "Lightbox Smoothies",
     },
   },
   {
-    slug: "lightboxExtreme",
+    slug: "lightbox-extreme",
     name: {
       en: "Lightbox Extreme",
     },
   },
   {
-    slug: "counterMenu",
+    slug: "counter-menu",
     name: {
       en: "Counter Menu",
     },
   },
   {
-    slug: "stickerBussiness",
+    slug: "sticker-business",
     name: {
       en: "Sticker Business",
     },
   },
   {
-    slug: "stickerPersonal",
+    slug: "sticker-personal",
     name: {
       en: "Sticker Personal",
     },
   },
   {
-    slug: "expressItem",
+    slug: "express-item",
     name: {
       en: "Express Item",
     },
