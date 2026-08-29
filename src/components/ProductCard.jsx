@@ -12,8 +12,8 @@ function ProductCard({ product }) {
       </div>
 
       <div className="mt-4">
-        <p className="text-sm uppercase tracking-widest text-zinc-500">
-          {product.name}
+        <p className="text-sm uppercase tracking-widest text-zinc-500">CODE :
+       <span className="ml-1"> {product.name}</span>
         </p>
         <h3 className="mt-1 text-sm font-medium">
           Size : <span className="ml-1">{product.size}</span>

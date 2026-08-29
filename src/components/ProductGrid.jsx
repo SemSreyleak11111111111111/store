@@ -33,13 +33,15 @@ function ProductGrid() {
                 {category}
               </h3>
 
-              {/* <div className="grid grid-cols-3 gap-2 sm:gap-4"> */}
-              <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+              {/* One horizontal row */}
+              <div className="flex gap-4 overflow-x-auto pb-4">
                 {categoryProducts.map((product) => (
-                  <ProductCard
+                  <div
                     key={product.id}
-                    product={product}
-                  />
+                    className="w-[280px] shrink-0 sm:w-[320px]"
+                  >
+                    <ProductCard product={product} />
+                  </div>
                 ))}
               </div>
             </section>
