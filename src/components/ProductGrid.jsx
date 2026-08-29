@@ -1,5 +1,6 @@
 import products from "../data/products";
 import ProductCard from "./ProductCard";
+import categories from "../data/categoryData";
 
 function ProductGrid() {
   const groupedProducts = products.reduce((groups, product) => {
@@ -17,20 +18,28 @@ function ProductGrid() {
   return (
     <div className="space-y-16">
       {Object.entries(groupedProducts).map(
-        ([category, categoryProducts]) => {
-          const slug = category
-            .toLowerCase()
-            .trim()
-            .replace(/\s+/g, "-");
+        ([categoryKey, categoryProducts]) => {
+          // Find the category object to get the clean name
+          const matchedCategory = categories.find(
+            (cat) => cat.slug === categoryKey || cat.name === categoryKey
+          );
+
+          const slug = matchedCategory 
+            ? matchedCategory.slug 
+            : categoryKey.toLowerCase().trim().replace(/\s+/g, "-");
+
+          const displayName = matchedCategory 
+            ? matchedCategory.name 
+            : categoryKey;
 
           return (
             <section
-              key={category}
+              key={categoryKey}
               id={slug}
               className="scroll-mt-24"
             >
               <h3 className="mb-6 text-2xl font-bold uppercase tracking-wider">
-                {category}
+                {displayName}
               </h3>
 
               {/* One horizontal row */}

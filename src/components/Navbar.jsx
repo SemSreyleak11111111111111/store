@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
 import categories from "../data/categoryData";
@@ -34,7 +33,7 @@ function Navbar() {
 
           {/* ================= DROPDOWN MENU ================= */}
           {menuOpen && (
-            <div className="absolute right-0 top-12 w-56 overflow-hidden rounded-xl border border-white/10 bg-zinc-950 shadow-2xl">
+            <div className="absolute right-0 top-12 w-56 max-h-[70vh] overflow-y-auto rounded-xl border border-white/10 bg-zinc-950 shadow-2xl">
 
               {/* Home */}
               <a
@@ -53,7 +52,7 @@ function Navbar() {
                   onClick={() => setMenuOpen(false)}
                   className="block px-5 py-3.5 text-sm transition hover:bg-white/10 hover:text-zinc-300"
                 >
-                  {category.name.en}
+                  {category.name}
                 </a>
               ))}
 
