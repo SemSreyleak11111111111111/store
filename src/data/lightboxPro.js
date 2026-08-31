@@ -19,7 +19,7 @@ const lightboxPro = [
   },
   {
     id: 2,
-    name: " LBP-A2",
+    name: "LBP-A2",
     category: "Lightbox Pro",
     price: 0,
     both_price: "eco-film: $40 | film-pro: $48",
@@ -28,7 +28,7 @@ const lightboxPro = [
   },
   {
     id: 3,
-    name: " LBP-S",
+    name: "LBP-S",
     category: "Lightbox Pro",
     price: 0,
     both_price: " eco-film: $45 | film-pro: $55",
@@ -37,7 +37,7 @@ const lightboxPro = [
   },
     {
     id: 4,
-    name: " LBP-M",
+    name: "LBP-M",
     category: "Lightbox Pro",
     price: 0,
     both_price: " eco-film: $50 | film-pro: $65",
@@ -55,7 +55,7 @@ const lightboxPro = [
   },
     {
     id: 6,
-    name: " LBP-Lx",
+    name: "LBP-Lx",
     category: "Lightbox Pro",
     price: 0,
     both_price: "eco-film: $99 | film-pro: $119",
