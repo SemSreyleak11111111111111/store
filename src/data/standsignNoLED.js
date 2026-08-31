@@ -4,7 +4,7 @@ const standsignNoLED = [
     name: "E1 ",
     category: "Stand Sign (No LED)",
     price: 54,
-    image: "https://i.pinimg.com/736x/cb/9b/50/cb9b50b13229d3d397917bb407e428ff.jpg",
+    image: "https://i.pinimg.com/736x/f6/45/86/f645868bd75d48bf0c0fb167ce706d24.jpg",
     size: "60cm x 90cm",
     both_price: "signle: $45 | double: $54",
 
