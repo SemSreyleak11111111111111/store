@@ -3,6 +3,10 @@ const categories = [
     slug: "lightbox-pro",
     name: "Lightbox Pro",
   },
+   {
+    slug: "stand-sign-no-led",
+    name: "Stand Sign (No LED)",
+  },
   {
     slug: "stand-sign",
     name: "Stand Sign",
@@ -12,10 +16,7 @@ const categories = [
     name: "Stand Sign LED",
   },
 
-  {
-    slug: "stand-sign-no-led",
-    name: "Stand Sign (No LED)",
-  },
+ 
   {
     slug: "lightbox-boob",
     name: "Lightbox Boob",

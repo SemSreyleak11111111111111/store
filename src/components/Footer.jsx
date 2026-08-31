@@ -113,12 +113,6 @@ function Footer() {
                         ))}
 
                     </div>
-
-                    {/* <div className="mt-16 flex flex-col justify-between gap-4 border-t border-white/10 pt-6 text-xs text-zinc-600 md:flex-row">
-            <p>© 2026 Cattttt</p>
-            <p>Made in Cambodia.</p>
-          </div> */}
-
                 </div>
             </div>
 

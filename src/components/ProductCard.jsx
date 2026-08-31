@@ -18,9 +18,7 @@ function ProductCard({ product }) {
         <h3 className="mt-1 text-sm font-medium">
           Size : <span className="ml-1">{product.size}</span>
         </h3>
-        {/* <p className="mt-2 text-sm text-zinc-400">
-          ${product.price}
-        </p> */}
+       
         <p className="mt-2 text-sm text-zinc-400">
           {product.both_price}
         </p>
