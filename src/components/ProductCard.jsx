@@ -16,7 +16,7 @@ function ProductCard({ product }) {
           CODE:<span className="ml-0.5">{product.name}</span>
         </p>
         <h3 className="mt-1 text-sm font-medium">
-          Size : <span className="ml-1">{product.size}</span>
+          Size : <span className="ml-.05">{product.size}</span>
         </h3>
 
         <p className="mt-2 text-sm text-zinc-400">
