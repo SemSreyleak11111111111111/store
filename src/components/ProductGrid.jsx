@@ -38,7 +38,7 @@ function ProductGrid() {
               id={slug}
               className="scroll-mt-24"
             >
-              <h3 className="mb-6 text-2xl font-bold uppercase tracking-wider">
+              <h3 className="mb-6 text-2xl font-bold tracking-wider">
                 {displayName}
               </h3>
 
