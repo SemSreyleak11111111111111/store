@@ -1,4 +1,8 @@
 const categories = [
+    {
+    slug: "lightbox-pro",
+    name: "Lightbox Pro",
+  },
   {
     slug: "stand-sign",
     name: "Stand Sign",
@@ -7,10 +11,7 @@ const categories = [
     slug: "stand-sign-led",
     name: "Stand Sign LED",
   },
-  {
-    slug: "lightbox-pro",
-    name: "Lightbox Pro",
-  },
+
   {
     slug: "stand-sign-no-led",
     name: "Stand Sign (No LED)",

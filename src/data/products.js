@@ -11,9 +11,9 @@ import stickerBussiness from "./stickerBussiness";
 import stickerPersonal from "./stickerPersonal";
 import expressItem from "./expressItem";
 const products = [
+   ...lightboxPro,
   ...standSignProducts,
   ...standSignLED,
-   ...lightboxPro,
   ...standsignNoLED,
   ...lightboxBoob,
   ...lightboxSmoothie,
