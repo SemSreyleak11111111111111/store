@@ -1,7 +1,4 @@
 
-import stand1 from "../assets/standSign/IMG_2053.JPG";
-import stand2 from "../assets/standSign/IMG_2054.JPG";
-import stand3 from "../assets/standSign/IMG_2055.JPG";
 
 const standSignLED = [
   {
