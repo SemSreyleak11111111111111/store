@@ -28,9 +28,12 @@ function ProductGrid() {
             ? matchedCategory.slug 
             : categoryKey.toLowerCase().trim().replace(/\s+/g, "-");
 
-          const displayName = matchedCategory 
-            ? matchedCategory.name 
-            : categoryKey;
+          // const displayName = matchedCategory 
+          //   ? matchedCategory.name 
+          //   : categoryKey;
+          const displayName = matchedCategory
+  ? matchedCategory.displayName
+  : categoryKey;
 
           return (
             <section
