@@ -124,7 +124,7 @@ const standsignNoLED = [
     price: 1,
     image: "https://i.pinimg.com/736x/6e/90/f6/6e90f628332270f66ab00301f0390fa8.jpg",
     size: "60cm x 168cm",
-    both_price: "110$",
+    both_price: "111$",
   },
 
 ];
